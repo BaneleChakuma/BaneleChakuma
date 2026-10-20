@@ -18,6 +18,14 @@ know to someone else, and keep going when there's no one to just hand you the an
 mindset — that growth is something you build *with* and *for* the people around you, not just
 alone — has stuck with me since.
 
+Part of that was working in a group on a brownfield project — inheriting someone else's
+existing codebase instead of starting from scratch, and having to understand, maintain and
+extend it the way it actually happens on the job. We worked the way real software teams do:
+Agile, in sprints, using tools like GitHub Codespaces and GitLab to build pipelines, and Docker
+to containerize and package what we built. WeThinkCode_ sets it up this way deliberately —
+simulating a real workplace, with its tools and its pace, so that by the time you're actually
+in one, none of it is unfamiliar.
+
 ---
 
 <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=600&height=45&repeat=false&lines=Featured+Project%3A+SafeShelf+Tembisa" alt="Featured Project: SafeShelf Tembisa" />
