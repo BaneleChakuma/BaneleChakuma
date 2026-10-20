@@ -8,6 +8,18 @@
 
 ---
 
+### 🌱 How I Got Started
+
+My journey into tech began as a student at **WeThinkCode_**, a coding school with no lecturers
+and no traditional classes. Instead, you learn by solving real problems alongside the people
+around you — peer-to-peer, project by project, figuring things out together instead of being
+taught from the front. It pushes you to grow fast: you learn to ask for help, explain what you
+know to someone else, and keep going when there's no one to just hand you the answer. That
+mindset — that growth is something you build *with* and *for* the people around you, not just
+alone — has stuck with me since.
+
+---
+
 ### 🧰 Languages & Data
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
