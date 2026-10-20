@@ -21,10 +21,12 @@ alone — has stuck with me since.
 Part of that was working in a group on a brownfield project — inheriting someone else's
 existing codebase instead of starting from scratch, and having to understand, maintain and
 extend it the way it actually happens on the job. We worked the way real software teams do:
-Agile, in sprints, using tools like GitHub Codespaces and GitLab to build pipelines, and Docker
-to containerize and package what we built. WeThinkCode_ sets it up this way deliberately —
-simulating a real workplace, with its tools and its pace, so that by the time you're actually
-in one, none of it is unfamiliar.
+Agile, in sprints, using GitLab to build pipelines and Docker to containerize and package what
+we built. We also used **CodeScene** to keep an eye on bottlenecks and run health checks on the
+codebase, which made the need for proper unit, acceptance and end-to-end tests click in a way
+no lecture could have. WeThinkCode_ sets it up this way deliberately — simulating a real
+workplace, with its tools and its pace, so that by the time you're actually in one, none of it
+is unfamiliar.
 
 ---
 
