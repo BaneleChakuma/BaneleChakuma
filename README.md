@@ -59,10 +59,9 @@
 
 ### ⚔️ Outside of Code
 
-> "I alone level up." — one more episode never hurt anyone.
-
-Big anime fan, currently hooked on **Solo Leveling**. There's something relatable about
-grinding quietly in the background until the stats finally catch up.
+I love **Solo Leveling** — not just for the action, but for what it says about growth: getting
+stronger isn't just for yourself, it's what lets you show up better for the people in your life.
+I watch it on Crunchyroll.
 
 ![Anime](https://img.shields.io/badge/Watching-Solo_Leveling-6b21a8?style=flat-square&logo=crunchyroll&logoColor=white)
 
