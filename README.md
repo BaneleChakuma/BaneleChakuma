@@ -38,16 +38,6 @@
 
 ---
 
-### 🏆 Trophies
-
-<div align="center">
-
-![Trophies](https://github-profile-trophy.vercel.app/?username=BaneleChakuma&theme=dracula&no-frame=true&row=1&column=6)
-
-</div>
-
----
-
 ### 🚧 What I'm Working On
 
 - 🗃️ Building a data pipeline end-to-end: extract, validate, clean, load — with a real test suite driving the design
@@ -59,11 +49,9 @@
 
 ### ⚔️ Outside of Code
 
-I love **Solo Leveling** — not just for the action, but for what it says about growth: getting
-stronger isn't just for yourself, it's what lets you show up better for the people in your life.
-I watch it on Crunchyroll.
-
-![Anime](https://img.shields.io/badge/Watching-Solo_Leveling-6b21a8?style=flat-square&logo=crunchyroll&logoColor=white)
+One of my favourite anime is **Solo Leveling**. What stays with me most is the idea that
+becoming stronger is never just for your own sake — it's what makes you able to show up for
+the people who matter to you.
 
 ---
 
