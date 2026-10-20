@@ -55,12 +55,6 @@ member could genuinely use it to pull bad stock off a shelf. Everything after th
 scoreboard, supplier report, police alerts, privacy rules, one-command automation — builds on
 that same foundation rather than being needed to prove the concept works.
 
-<div align="center">
-
-<img src="https://cdn.jsdelivr.net/gh/BaneleChakuma/BaneleChakuma@master/roadmap.svg" alt="SafeShelf Tembisa roadmap: Iteration 0 done, Iterations 1-4 done, Iteration 5 in progress, Stretch goals up next" width="100%" />
-
-</div>
-
 ---
 
 <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=400&height=45&repeat=false&lines=Languages+%26+Data" alt="Languages & Data" />
