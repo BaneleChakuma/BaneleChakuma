@@ -8,7 +8,7 @@
 
 ---
 
-### 🌱 How I Got Started
+### How I Got Started
 
 My journey into tech began as a student at **WeThinkCode_**, a coding school with no lecturers
 and no traditional classes. Instead, you learn by solving real problems alongside the people
@@ -20,7 +20,7 @@ alone — has stuck with me since.
 
 ---
 
-### 📦 Featured Project: SafeShelf Tembisa
+### Featured Project: SafeShelf Tembisa
 
 A data pipeline that tracks food **from the delivery truck to the shelf** in Tembisa, tackling
 two problems at once: expired or spoiled food sold in local stores, and the risk of delivery
@@ -36,7 +36,7 @@ trucks being hijacked.
   while its GPS location is the most restricted data in the system, visible only to police and
   automatically deleted after 30 days
 
-🔗 [github.com/BaneleChakuma/safeshelf-tembisa](https://github.com/BaneleChakuma/safeshelf-tembisa)
+[github.com/BaneleChakuma/safeshelf-tembisa](https://github.com/BaneleChakuma/safeshelf-tembisa)
 
 **My MVP plan:** the smallest version that actually proves the idea isn't just "the pipeline
 runs" — it's the first report landing. Once clean data is loading and producing the
@@ -47,13 +47,13 @@ that same foundation rather than being needed to prove the concept works.
 
 ---
 
-### 🧰 Languages & Data
+### Languages & Data
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 
-### 🧪 Tools & Workflow
+### Tools & Workflow
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
@@ -77,16 +77,16 @@ that same foundation rather than being needed to prove the concept works.
 
 ---
 
-### 🚧 What I'm Working On
+### What I'm Working On
 
-- 🗃️ Building a data pipeline end-to-end: extract, validate, clean, load — with a real test suite driving the design
-- 📐 Practicing schema design: keys, constraints, and role-based SQL views
-- 🔐 Learning data governance and privacy rules (POPIA) as first-class parts of a pipeline, not an afterthought
-- 🧪 Writing tests before the code they test — unit, acceptance and end-to-end
+- Building a data pipeline end-to-end: extract, validate, clean, load — with a real test suite driving the design
+- Practicing schema design: keys, constraints, and role-based SQL views
+- Learning data governance and privacy rules (POPIA) as first-class parts of a pipeline, not an afterthought
+- Writing tests before the code they test — unit, acceptance and end-to-end
 
 ---
 
-### ⚔️ Outside of Code
+### Outside of Code
 
 One of my favourite anime is **Solo Leveling**. What stays with me most is the idea that
 becoming stronger is never just for your own sake — it's what makes you able to show up for
@@ -94,7 +94,7 @@ the people who matter to you.
 
 ---
 
-### 📫 Connect with Me
+### Connect with Me
 
 <div align="center">
 
