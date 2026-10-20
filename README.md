@@ -1,8 +1,8 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0a,100:6b21a8&height=180&section=header&text=Banele%20Chakuma&fontSize=48&fontColor=e9d5ff&animation=fadeIn&desc=Aspiring%20Data%20Engineer&descAlignY=65&descSize=18"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0a,100:86198f&height=180&section=header&text=Banele%20Chakuma&fontSize=48&fontColor=f5d0fe&animation=fadeIn&desc=Aspiring%20Data%20Engineer&descAlignY=65&descSize=18"/>
 
-<img src="https://readme-typing-svg.demolab.com/?lines=Building+data+pipelines%2C+one+table+at+a+time;Python+%2B+SQL+%2B+SQLite;Learning+by+shipping+real+projects;Currently+leveling+up+like+Jin-Woo&font=Fira+Code&center=true&width=600&height=40&color=a855f7&vCenter=true&size=20"/>
+<img src="https://readme-typing-svg.demolab.com/?lines=Building+data+pipelines%2C+one+table+at+a+time;Python+%2B+SQL+%2B+SQLite;Learning+by+shipping+real+projects;Currently+leveling+up+like+Jin-Woo&font=Fira+Code&center=true&width=600&height=40&color=e879f9&vCenter=true&size=20"/>
 
 </div>
 
@@ -72,6 +72,12 @@ that same foundation rather than being needed to prove the concept works.
 <div align="center">
 
 ![Streak](https://github-readme-streak-stats.herokuapp.com/?user=BaneleChakuma&theme=dracula&hide_border=true&background=0D1117)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/output/github-contribution-grid-snake.svg" />
+  <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/output/github-contribution-grid-snake.svg" />
+</picture>
 
 </div>
 
