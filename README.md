@@ -57,7 +57,7 @@ that same foundation rather than being needed to prove the concept works.
 
 <div align="center">
 
-<img src="roadmap.svg" alt="SafeShelf Tembisa roadmap: Iteration 0 done, Iterations 1-4 done, Iteration 5 in progress, Stretch goals up next" width="100%" />
+<img src="https://cdn.jsdelivr.net/gh/BaneleChakuma/BaneleChakuma@master/roadmap.svg" alt="SafeShelf Tembisa roadmap: Iteration 0 done, Iterations 1-4 done, Iteration 5 in progress, Stretch goals up next" width="100%" />
 
 </div>
 
@@ -90,9 +90,9 @@ that same foundation rather than being needed to prove the concept works.
 ![Streak](https://github-readme-streak-stats.herokuapp.com/?user=BaneleChakuma&theme=dracula&hide_border=true&background=0D1117)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/output/github-contribution-grid-snake.svg" />
-  <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/output/github-contribution-grid-snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/BaneleChakuma/BaneleChakuma@output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BaneleChakuma/BaneleChakuma@output/github-contribution-grid-snake.svg" />
+  <img alt="Contribution snake animation" src="https://cdn.jsdelivr.net/gh/BaneleChakuma/BaneleChakuma@output/github-contribution-grid-snake.svg" />
 </picture>
 
 </div>
