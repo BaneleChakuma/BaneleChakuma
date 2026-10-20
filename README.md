@@ -75,6 +75,4 @@ the people who matter to you.
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/banele-chakuma-51301436b/)
 [![Email](https://img.shields.io/badge/Email-banelechakuma%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:banelechakuma@gmail.com)
 
-![Profile Views](https://komarev.com/ghpvc/?username=BaneleChakuma&style=flat-square&color=a855f7&label=Profile+Views)
-
 </div>
