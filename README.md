@@ -20,6 +20,33 @@ alone — has stuck with me since.
 
 ---
 
+### 📦 Featured Project: SafeShelf Tembisa
+
+A data pipeline that tracks food **from the delivery truck to the shelf** in Tembisa, tackling
+two problems at once: expired or spoiled food sold in local stores, and the risk of delivery
+trucks being hijacked.
+
+- **Stores** record deliveries, **committee members** do shelf checks, **residents** report
+  problems anonymously, and **trucks** send trip updates
+- The pipeline validates and cleans the data, then builds daily reports from role-based SQL
+  views, so each audience only ever sees what they're allowed to see
+- **For the community**: a daily list of expired food to pull from shelves, a store scoreboard
+  built only from verified findings, and supplier accountability for near-expiry deliveries
+- **For truckers**: a police-only alert when a truck is running late or stops unexpectedly —
+  while its GPS location is the most restricted data in the system, visible only to police and
+  automatically deleted after 30 days
+
+🔗 [github.com/BaneleChakuma/safeshelf-tembisa](https://github.com/BaneleChakuma/safeshelf-tembisa)
+
+**My MVP plan:** the smallest version that actually proves the idea isn't just "the pipeline
+runs" — it's the first report landing. Once clean data is loading and producing the
+expired-food and essentials-expiring reports, that's the MVP: the point where a committee
+member could genuinely use it to pull bad stock off a shelf. Everything after that — the
+scoreboard, supplier report, police alerts, privacy rules, one-command automation — builds on
+that same foundation rather than being needed to prove the concept works.
+
+---
+
 ### 🧰 Languages & Data
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
