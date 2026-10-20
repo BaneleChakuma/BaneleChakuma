@@ -2,13 +2,13 @@
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0a,100:86198f&height=180&section=header&text=Banele%20Chakuma&fontSize=48&fontColor=f5d0fe&animation=fadeIn&desc=Aspiring%20Data%20Engineer&descAlignY=65&descSize=18"/>
 
-<img src="https://readme-typing-svg.demolab.com/?lines=Hello+reader;welcome+to+my+github+profile;making+a+difference+with+tech&font=Fira+Code&center=true&width=900&height=40&color=e879f9&vCenter=true&size=20&duration=6000&pause=1500"/>
+**Hello reader — welcome to my GitHub profile. I'm making a difference with tech.**
 
 </div>
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=500&height=45&repeat=false&lines=How+I+Got+Started" alt="How I Got Started" />
+### How I Got Started
 
 My journey into tech began as a student at **WeThinkCode_**, a coding school with no lecturers
 and no traditional classes. Instead, you learn by solving real problems alongside the people
@@ -30,7 +30,7 @@ is unfamiliar.
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=600&height=45&repeat=false&lines=Featured+Project%3A+SafeShelf+Tembisa" alt="Featured Project: SafeShelf Tembisa" />
+### Featured Project: SafeShelf Tembisa
 
 A data pipeline that tracks food **from the delivery truck to the shelf** in Tembisa, tackling
 two problems at once: expired or spoiled food sold in local stores, and the risk of delivery
@@ -63,13 +63,13 @@ that same foundation rather than being needed to prove the concept works.
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=400&height=45&repeat=false&lines=Languages+%26+Data" alt="Languages & Data" />
+### Languages & Data
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=400&height=45&repeat=false&lines=Tools+%26+Workflow" alt="Tools & Workflow" />
+### Tools & Workflow
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
@@ -99,7 +99,7 @@ that same foundation rather than being needed to prove the concept works.
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=500&height=45&repeat=false&lines=What+I%27m+Working+On" alt="What I'm Working On" />
+### What I'm Working On
 
 - Building a data pipeline end-to-end: extract, validate, clean, load — with a real test suite driving the design
 - Practicing schema design: keys, constraints, and role-based SQL views
@@ -108,7 +108,7 @@ that same foundation rather than being needed to prove the concept works.
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=400&height=45&repeat=false&lines=Outside+of+Code" alt="Outside of Code" />
+### Outside of Code
 
 One of my favourite anime is **Solo Leveling**. What stays with me most is the idea that
 becoming stronger is never just for your own sake — it's what makes you able to show up for
@@ -116,7 +116,7 @@ the people who matter to you.
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=400&height=45&repeat=false&lines=Connect+with+Me" alt="Connect with Me" />
+### Connect with Me
 
 <div align="center">
 
