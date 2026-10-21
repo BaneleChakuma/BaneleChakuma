@@ -1,8 +1,10 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0a,100:86198f&height=180&section=header&text=Banele%20Chakuma&fontSize=48&fontColor=f5d0fe&animation=fadeIn&desc=Aspiring%20Data%20Engineer&descAlignY=65&descSize=18"/>
-
-<img src="https://readme-typing-svg.demolab.com/?lines=Hello+reader;welcome+to+my+github+profile;making+a+difference+with+tech&font=Fira+Code&center=true&width=900&height=40&color=e879f9&vCenter=true&size=20&duration=6000&pause=1500"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/header-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/header-light.svg">
+  <img width="100%" alt="Banele Chakuma, Aspiring Data Engineer. Hello reader, welcome to my github profile, making a difference with tech." src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/header-dark.svg">
+</picture>
 
 </div>
 
