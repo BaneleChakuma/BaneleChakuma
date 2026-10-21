@@ -169,6 +169,10 @@ that same foundation rather than being needed to prove the concept works.
 - Learning data governance and privacy rules (POPIA) as first-class parts of a pipeline, not an afterthought
 - Writing tests before the code they test — unit, acceptance and end-to-end
 
+<!-- latest-commit:start -->
+**Latest commit:** [Update USER\_STORIES.md to match the combined milestone](https://github.com/BaneleChakuma/safeshelf-tembisa/commit/ed1a187644c42aecdb6be5468a97caa3af0d4489) in [safeshelf-tembisa](https://github.com/BaneleChakuma/safeshelf-tembisa) · 20 Oct 2026
+<!-- latest-commit:end -->
+
 ---
 
 <a name="outside-of-code"></a>
