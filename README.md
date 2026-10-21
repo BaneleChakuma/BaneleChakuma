@@ -62,6 +62,33 @@ trucks being hijacked.
   while its GPS location is the most restricted data in the system, visible only to police and
   automatically deleted after 30 days
 
+```mermaid
+flowchart LR
+    subgraph inputs["Daily input files"]
+        direction TB
+        D["Store deliveries"]
+        S["Committee shelf checks"]
+        C["Anonymous resident reports"]
+        T["Truck trip updates"]
+    end
+    inputs --> P["extract → validate → clean → load"]
+    P --> DB[("SQLite database")]
+    DB --> CV{{"committee_view"}}
+    DB --> SV{{"store_view"}}
+    DB --> MV{{"community_view"}}
+    DB --> PV{{"police_view"}}
+    CV --> R1["Expired food on shelves"]
+    CV --> R2["Suppliers delivering near-expiry stock"]
+    SV --> R3["Essentials about to expire"]
+    MV --> R4["Store scoreboard"]
+    PV --> R5["Late trucks and unexpected stops"]
+    PV -.- G["Truck GPS: police only, removed after 30 days"]
+    classDef view stroke:#c026d3,stroke-width:2px
+    classDef private stroke:#c026d3,stroke-width:2px,stroke-dasharray:5 4
+    class CV,SV,MV view
+    class PV,G private
+```
+
 [github.com/BaneleChakuma/safeshelf-tembisa](https://github.com/BaneleChakuma/safeshelf-tembisa)
 
 **My MVP plan:** the smallest version that actually proves the idea isn't just "the pipeline
