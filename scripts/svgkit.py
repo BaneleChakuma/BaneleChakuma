@@ -43,7 +43,7 @@ def font_css(weights_text):
     rules = []
     for weight, text in sorted(weights_text.items()):
         chars = ''.join(sorted(set(text))) or ' '
-        font = TTFont(f'{FONT_DIR}/fira-code-latin-{weight}-normal.woff2')
+        font = TTFont(f'{FONT_DIR}/fira-code-latin-{weight}-normal.woff2', recalcTimestamp=False)
         opts = subset.Options()
         opts.flavor = 'woff2'
         opts.layout_features = []
@@ -54,6 +54,7 @@ def font_css(weights_text):
         sub.subset(font)
         buf = io.BytesIO()
         font.flavor = 'woff2'
+        font['head'].modified = font['head'].created  # keep output byte-identical between runs
         font.save(buf)
         b64 = base64.b64encode(buf.getvalue()).decode()
         rules.append(
