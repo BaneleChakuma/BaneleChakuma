@@ -132,12 +132,6 @@ that same foundation rather than being needed to prove the concept works.
   <img width="100%" alt="My GitHub activity over the last 12 months: contributions, current and longest streak, a 26-week contribution map and my top languages" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/activity/activity-dark.svg">
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/output/github-contribution-grid-snake.svg" />
-  <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/output/github-contribution-grid-snake.svg" />
-</picture>
-
 </div>
 
 ---
