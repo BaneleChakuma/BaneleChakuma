@@ -91,12 +91,17 @@ flowchart LR
 
 [github.com/BaneleChakuma/safeshelf-tembisa](https://github.com/BaneleChakuma/safeshelf-tembisa)
 
+<details>
+<summary><b>My MVP plan</b></summary>
+
 **My MVP plan:** the smallest version that actually proves the idea isn't just "the pipeline
 runs" — it's the first report landing. Once clean data is loading and producing the
 expired-food and essentials-expiring reports, that's the MVP: the point where a committee
 member could genuinely use it to pull bad stock off a shelf. Everything after that — the
 scoreboard, supplier report, police alerts, privacy rules, one-command automation — builds on
 that same foundation rather than being needed to prove the concept works.
+
+</details>
 
 ---
 
