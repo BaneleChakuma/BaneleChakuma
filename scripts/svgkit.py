@@ -254,14 +254,19 @@ def pipeline_motif(th, fade_anim):
     return ''.join(out)
 
 
-def heading(text, theme_name, width=840):
-    """Section heading: diamond glyph + text typed once + rule that draws in after typing."""
+def heading(text, theme_name, width=None):
+    """Section heading: diamond glyph + text typed once + rule that draws in after typing.
+
+    The image is sized to its text (plus a short rule) so it stays legible when phones scale it down.
+    """
     th = THEMES[theme_name]
     H = 44
     fs, ls = 20, 0.4
     adv = ADV * fs + ls
     x0, base = 34, 29
     n = len(text)
+    if width is None:
+        width = int(math.ceil(x0 + n * adv + 22 + 160))
     start, per = 0.25, 0.055
     t_end = start + n * per
     full = n * adv
