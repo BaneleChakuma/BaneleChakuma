@@ -10,7 +10,14 @@
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=500&height=45&repeat=false&lines=How+I+Got+Started" alt="How I Got Started" />
+<a name="how-i-got-started"></a>
+<h3>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/how-i-got-started-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/how-i-got-started-light.svg">
+  <img alt="How I Got Started" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/how-i-got-started-dark.svg">
+</picture>
+</h3>
 
 My journey into tech began as a student at **WeThinkCode_**, a coding school with no lecturers
 and no traditional classes. Instead, you learn by solving real problems alongside the people
@@ -32,7 +39,14 @@ is unfamiliar.
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=600&height=45&repeat=false&lines=Featured+Project%3A+SafeShelf+Tembisa" alt="Featured Project: SafeShelf Tembisa" />
+<a name="featured-project"></a>
+<h3>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/featured-project-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/featured-project-light.svg">
+  <img alt="Featured Project: SafeShelf Tembisa" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/featured-project-dark.svg">
+</picture>
+</h3>
 
 A data pipeline that tracks food **from the delivery truck to the shelf** in Tembisa, tackling
 two problems at once: expired or spoiled food sold in local stores, and the risk of delivery
@@ -59,13 +73,27 @@ that same foundation rather than being needed to prove the concept works.
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=400&height=45&repeat=false&lines=Languages+%26+Data" alt="Languages & Data" />
+<a name="languages-and-data"></a>
+<h3>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/languages-and-data-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/languages-and-data-light.svg">
+  <img alt="Languages & Data" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/languages-and-data-dark.svg">
+</picture>
+</h3>
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=400&height=45&repeat=false&lines=Tools+%26+Workflow" alt="Tools & Workflow" />
+<a name="tools-and-workflow"></a>
+<h3>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/tools-and-workflow-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/tools-and-workflow-light.svg">
+  <img alt="Tools & Workflow" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/tools-and-workflow-dark.svg">
+</picture>
+</h3>
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
@@ -95,7 +123,14 @@ that same foundation rather than being needed to prove the concept works.
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=500&height=45&repeat=false&lines=What+I%27m+Working+On" alt="What I'm Working On" />
+<a name="what-im-working-on"></a>
+<h3>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/what-im-working-on-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/what-im-working-on-light.svg">
+  <img alt="What I'm Working On" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/what-im-working-on-dark.svg">
+</picture>
+</h3>
 
 - Building a data pipeline end-to-end: extract, validate, clean, load — with a real test suite driving the design
 - Practicing schema design: keys, constraints, and role-based SQL views
@@ -104,7 +139,14 @@ that same foundation rather than being needed to prove the concept works.
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=400&height=45&repeat=false&lines=Outside+of+Code" alt="Outside of Code" />
+<a name="outside-of-code"></a>
+<h3>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/outside-of-code-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/outside-of-code-light.svg">
+  <img alt="Outside of Code" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/outside-of-code-dark.svg">
+</picture>
+</h3>
 
 One of my favourite anime is **Solo Leveling**. What stays with me most is the idea that
 becoming stronger is never just for your own sake — it's what makes you able to show up for
@@ -112,7 +154,14 @@ the people who matter to you.
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=e879f9&center=false&vCenter=true&width=400&height=45&repeat=false&lines=Connect+with+Me" alt="Connect with Me" />
+<a name="connect-with-me"></a>
+<h3>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/connect-with-me-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/connect-with-me-light.svg">
+  <img alt="Connect with Me" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/headings/connect-with-me-dark.svg">
+</picture>
+</h3>
 
 <div align="center">
 
