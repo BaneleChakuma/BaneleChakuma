@@ -70,28 +70,11 @@ trucks being hijacked.
   while its GPS location is the most restricted data in the system, visible only to police and
   automatically deleted after 30 days
 
-```mermaid
-flowchart LR
-    D["Store deliveries"] --> P
-    S["Committee shelf checks"] --> P
-    C["Anonymous resident reports"] --> P
-    T["Truck trip updates"] --> P
-    P["extract → validate → clean → load"] --> DB[("SQLite database")]
-    DB --> CV{{"committee_view"}}
-    DB --> SV{{"store_view"}}
-    DB --> MV{{"community_view"}}
-    DB --> PV{{"police_view"}}
-    CV --> R1["Expired food on shelves"]
-    CV --> R2["Suppliers delivering near-expiry stock"]
-    SV --> R3["Essentials about to expire"]
-    MV --> R4["Store scoreboard"]
-    PV --> R5["Late trucks and unexpected stops"]
-    PV -.- G["Truck GPS: police only, removed after 30 days"]
-    classDef view stroke:#c026d3,stroke-width:2px
-    classDef private stroke:#c026d3,stroke-width:2px,stroke-dasharray:5 4
-    class CV,SV,MV view
-    class PV,G private
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/safeshelf-pipeline-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/safeshelf-pipeline-light.svg">
+  <img width="100%" alt="SafeShelf pipeline. Store deliveries, committee shelf checks, anonymous resident reports and truck trip updates go through extract, validate, clean and load into a SQLite database. The committee view feeds the expired-food and near-expiry supplier reports, the store view feeds essentials about to expire, the community view feeds the store scoreboard, and the police view feeds late-truck and unexpected-stop alerts. Truck GPS is police-only and removed after 30 days." src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/safeshelf-pipeline-dark.svg">
+</picture>
 
 [github.com/BaneleChakuma/safeshelf-tembisa](https://github.com/BaneleChakuma/safeshelf-tembisa)
 

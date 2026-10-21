@@ -466,3 +466,93 @@ def project_card(theme_name):
                          f'<animate attributeName="stroke-opacity" values="0.75;0.75;1;0.75" keyTimes="0;0.2;0.24;0.32" dur="{period}s" repeatCount="indefinite"/></rect>')
     p.append('</svg>')
     return ''.join(p)
+
+
+def pipeline_diagram(theme_name):
+    """SafeShelf data flow drawn as a static SVG (GitHub's profile page can't render Mermaid)."""
+    th = THEMES[theme_name]
+    W, H = 900, 388
+    fs, lh = 12, 15
+    cw = ADV * fs
+
+    inputs = [('Store deliveries',), ('Committee shelf', 'checks'), ('Anonymous resident', 'reports'), ('Truck trip updates',)]
+    steps = ['extract', 'validate', 'clean', 'load']
+    views = [('committee_view', 82), ('store_view', 170), ('community_view', 222), ('police_view', 300)]
+    reports = [(('Expired food on', 'shelves'), 0), (('Suppliers delivering', 'near-expiry stock'), 0),
+               (('Essentials about', 'to expire'), 1), (('Store scoreboard',), 2),
+               (('Late trucks and', 'unexpected stops'), 3), (('Truck GPS: police only,', 'removed after 30 days'), 3)]
+    heads = [('INPUT FILES', 10), ('PIPELINE', 215), ('DATABASE', 410), ('ROLE VIEWS', 545), ('DAILY REPORTS', 700)]
+    texts = ''.join(''.join(t) for t in inputs) + ''.join(steps) + 'SQLite database' + ''.join(v for v, _ in views)
+    texts += ''.join(''.join(r) for r, _ in reports) + ''.join(h for h, _ in heads)
+    css = font_css({500: texts})
+
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">',
+         '<title id="t">SafeShelf pipeline: four daily input files go through extract, validate, clean and load into a SQLite database. '
+         'Four role views feed the daily reports. Truck GPS is visible to police only and removed after 30 days.</title>',
+         f"<style>{css}text{{font-family:'FC',ui-monospace,monospace}}</style>",
+         '<defs>',
+         f'<marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">'
+         f'<path d="M0 0L8 4L0 8Z" fill="{th["line"]}"/></marker>',
+         '</defs>']
+
+    def box(x, y, w, h, lines, stroke, dashed=False, strong=False):
+        d = chamfer_path(x, y, w, h, 6)
+        dash = ' stroke-dasharray="5 4"' if dashed else ''
+        out = [f'<path d="{d}" fill="{th["chip_fill"]}" fill-opacity="0.92" stroke="{stroke}" stroke-width="{1.6 if strong else 1.2}"{dash}/>']
+        top = y + h / 2 - (len(lines) - 1) * lh / 2 + 4.2
+        for i, line in enumerate(lines):
+            out.append(f'<text x="{f(x + w / 2)}" y="{f(top + i * lh)}" font-size="{fs}" font-weight="500" '
+                       f'text-anchor="middle" fill="{th["chip_text"]}">{escape(line)}</text>')
+        return ''.join(out)
+
+    def link(x1, y1, x2, y2, dashed=False, flow=True):
+        dx = (x2 - x1) * 0.5
+        d = f'M{f(x1)} {f(y1)}C{f(x1 + dx)} {f(y1)} {f(x2 - dx)} {f(y2)} {f(x2)} {f(y2)}'
+        if dashed:
+            return f'<path d="{d}" fill="none" stroke="{th["accent"]}" stroke-width="1.3" stroke-dasharray="2 4"/>'
+        anim = ('<animate attributeName="stroke-dashoffset" values="16;0" dur="1.4s" repeatCount="indefinite"/>' if flow else '')
+        return (f'<path d="{d}" fill="none" stroke="{th["line"]}" stroke-width="1.2" stroke-opacity="0.85" '
+                f'stroke-dasharray="5 3" marker-end="url(#ar)">{anim}</path>')
+
+    for label, x in heads:
+        p.append(f'<text x="{x}" y="18" font-size="9.5" font-weight="500" letter-spacing="2" fill="{th["label"]}">{label}</text>')
+
+    # inputs -> pipeline
+    in_x, in_w, in_h = 10, 170, 40
+    in_ys = [96, 146, 196, 246]
+    for lines, cy in zip(inputs, in_ys):
+        p.append(link(in_x + in_w, cy, 215, 196))
+    # pipeline box with four steps
+    px, py, pw, ph = 215, 126, 160, 140
+    p.append(f'<path d="{chamfer_path(px, py, pw, ph, 8)}" fill="{th["chip_fill"]}" fill-opacity="0.92" stroke="{th["line"]}" stroke-width="1.6"/>')
+    for i, s in enumerate(steps):
+        yy = py + 30 + i * 28
+        gx = px + 26
+        p.append(f'<rect x="{gx - 3.5}" y="{yy - 7.5}" width="7" height="7" transform="rotate(45 {gx} {yy - 4})" fill="{th["accent"]}">'
+                 f'<animate attributeName="opacity" values="0.35;1;0.35" dur="2.8s" begin="{f(i * 0.7)}s" repeatCount="indefinite"/></rect>')
+        p.append(f'<text x="{gx + 14}" y="{yy}" font-size="{fs + 1}" font-weight="500" fill="{th["chip_text"]}">{s}</text>')
+    p.append(link(px + pw, 196, 410, 196))
+    # database cylinder
+    dx_, dy_, dw, dh, ry = 410, 158, 100, 76, 9
+    p.append(f'<path d="M{dx_} {dy_ + ry}V{dy_ + dh - ry}A{dw / 2} {ry} 0 0 0 {dx_ + dw} {dy_ + dh - ry}V{dy_ + ry}" '
+             f'fill="{th["chip_fill"]}" fill-opacity="0.92" stroke="{th["line"]}" stroke-width="1.4"/>')
+    p.append(f'<ellipse cx="{dx_ + dw / 2}" cy="{dy_ + ry}" rx="{dw / 2}" ry="{ry}" fill="{th["chip_fill"]}" stroke="{th["line"]}" stroke-width="1.4"/>')
+    p.append(f'<text x="{dx_ + dw / 2}" y="{dy_ + 44}" font-size="{fs}" font-weight="500" text-anchor="middle" fill="{th["chip_text"]}">SQLite</text>')
+    p.append(f'<text x="{dx_ + dw / 2}" y="{dy_ + 59}" font-size="{fs}" font-weight="500" text-anchor="middle" fill="{th["chip_text"]}">database</text>')
+    # views
+    vx, vw, vh = 545, 125, 34
+    for name, cy in views:
+        p.append(link(dx_ + dw, 196, vx, cy))
+        p.append(box(vx, cy - vh / 2, vw, vh, [name], th['accent'], dashed=(name == 'police_view'), strong=True))
+    # reports
+    rx, rw, rh = 700, 190, 40
+    r_ys = [54, 106, 170, 222, 280, 334]
+    for (lines, vi), cy in zip(reports, r_ys):
+        vcy = views[vi][1]
+        private = lines[0].startswith('Truck GPS')
+        p.append(link(vx + vw, vcy, rx, cy, dashed=private))
+        p.append(box(rx, cy - rh / 2, rw, rh, list(lines), th['accent'] if private else th['line'], dashed=private))
+    for lines, cy in zip(inputs, in_ys):
+        p.append(box(in_x, cy - in_h / 2, in_w, in_h, list(lines), th['line']))
+    p.append('</svg>')
+    return ''.join(p)
