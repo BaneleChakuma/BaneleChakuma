@@ -390,3 +390,73 @@ def uniq(svg):
         svg = svg.replace(f'id="{i}"', f'id="{pre}{i}"').replace(f'url(#{i})', f'url(#{pre}{i})') \
                  .replace(f'aria-labelledby="{i}"', f'aria-labelledby="{pre}{i}"')
     return svg
+
+
+def project_card(theme_name):
+    """SafeShelf Tembisa card: title, one-liner, stack and a small animated truck-to-shelf scene."""
+    th = THEMES[theme_name]
+    W, H = 840, 210
+    label, title = 'FEATURED PROJECT', 'SafeShelf Tembisa'
+    sub = 'From the delivery truck to the shelf'
+    stack = 'Python · SQLite · pytest · GitHub Actions'
+    cta = 'View the repo'
+    css = font_css({600: title, 500: label + stack + cta, 400: sub})
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">',
+         '<title id="t">SafeShelf Tembisa: tracking food from the delivery truck to the shelf. View the repository.</title>',
+         f"<style>{css}text{{font-family:'FC',ui-monospace,monospace}}</style>",
+         '<defs>',
+         f'<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{th["panel0"]}"/><stop offset="1" stop-color="{th["panel1"]}"/></linearGradient>',
+         f'<radialGradient id="gl" cx="0.8" cy="0.3" r="0.6"><stop offset="0" stop-color="{th["glow"]}" stop-opacity="0.38"/><stop offset="1" stop-color="{th["glow"]}" stop-opacity="0"/></radialGradient>',
+         f'<linearGradient id="nm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{th["name0"]}"/><stop offset="1" stop-color="{th["name2"]}"/></linearGradient>',
+         f'<clipPath id="card"><rect width="{W}" height="{H}" rx="16"/></clipPath>',
+         '</defs>',
+         f'<g clip-path="url(#card)"><rect width="{W}" height="{H}" fill="url(#bg)"/><rect width="{W}" height="{H}" fill="url(#gl)"/></g>']
+    p.append(f'<path d="{chamfer_path(14, 14, W - 28, H - 28, 10)}" fill="none" stroke="{th["line"]}" stroke-width="1.2" stroke-opacity="0.7"/>')
+    for (cx, cy, dx, dy) in [(10, 10, 1, 1), (W - 10, 10, -1, 1), (10, H - 10, 1, -1), (W - 10, H - 10, -1, -1)]:
+        p.append(f'<path d="M{cx} {cy + dy * 14}V{cy}H{cx + dx * 14}" fill="none" stroke="{th["bracket"]}" stroke-width="2.2"/>')
+    p.append(f'<text x="38" y="48" font-size="10.5" font-weight="500" letter-spacing="3" fill="{th["label"]}">{label}</text>')
+    p.append(f'<text x="38" y="88" font-size="28" font-weight="600" fill="url(#nm)">{title}</text>')
+    p.append(f'<text x="38" y="115" font-size="14.5" font-weight="400" fill="{th["text"]}">{escape(sub)}</text>')
+    p.append(f'<text x="38" y="141" font-size="12" font-weight="500" fill="{th["muted"]}">{escape(stack)}</text>')
+    cw = 14 + tw(cta, 13) + 12 + 12 + 12
+    p.append(f'<path d="{chamfer_path(38, 156, cw, 32, 7)}" fill="{th["btn_fill"]}"/>')
+    p.append(f'<text x="52" y="177" font-size="13" font-weight="500" fill="{th["btn_text"]}">{cta}</text>')
+    ax, ay = 38 + cw - 18, 172
+    p.append(f'<path d="M{f(ax - 4.5)} {f(ay + 4.5)}L{f(ax + 4.5)} {f(ay - 4.5)}M{f(ax - 2)} {f(ay - 4.5)}H{f(ax + 4.5)}V{f(ay + 2)}" '
+             f'fill="none" stroke="{th["btn_text"]}" stroke-width="1.7" stroke-linecap="square"/>')
+
+    # truck (left of scene)
+    s = th['line']
+    p.append(f'<g fill="none" stroke="{s}" stroke-width="1.6" stroke-linejoin="round">'
+             f'<rect x="478" y="102" width="70" height="40"/>'
+             f'<path d="M548 114H568L582 128V142H548Z"/>'
+             f'<path d="M556 118H566L574 128H556Z" stroke-width="1.2"/>'
+             f'<circle cx="496" cy="146" r="7" fill="{th["panel0"]}"/><circle cx="566" cy="146" r="7" fill="{th["panel0"]}"/>'
+             '</g>')
+    p.append(f'<line x1="478" y1="155" x2="584" y2="155" stroke="{s}" stroke-width="1" opacity="0.4"/>')
+    # route
+    p.append(f'<line x1="594" y1="136" x2="676" y2="136" stroke="{th["accent"]}" stroke-width="1.3" stroke-dasharray="3 4">'
+             '<animate attributeName="stroke-dashoffset" values="14;0" dur="1.1s" repeatCount="indefinite"/></line>')
+    period = 6
+    p.append(f'<rect x="-3" y="133" width="6" height="6" fill="{th["bracket"]}" opacity="0">'
+             f'<animateTransform attributeName="transform" type="translate" values="596 0;674 0;674 0" keyTimes="0;0.2;1" dur="{period}s" repeatCount="indefinite"/>'
+             f'<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.02;0.18;0.2;1" dur="{period}s" repeatCount="indefinite"/></rect>')
+    # shelf
+    sx, sy, sw, sh = 690, 62, 116, 100
+    p.append(f'<g fill="none" stroke="{s}" stroke-width="1.6"><rect x="{sx}" y="{sy}" width="{sw}" height="{sh}"/>'
+             f'<line x1="{sx}" y1="{sy + 33}" x2="{sx + sw}" y2="{sy + 33}"/><line x1="{sx}" y1="{sy + 66}" x2="{sx + sw}" y2="{sy + 66}"/></g>')
+    items = [(0, [10, 34, 58, 82]), (1, [10, 34, 58, 82]), (2, [10, 34, 58, 82])]
+    flagged = (1, 58)
+    for row, xs in items:
+        for x in xs:
+            ix, iy = sx + x, sy + row * 33 + 10
+            if (row, x) == flagged:
+                p.append(f'<g><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.55;0.65;0.92;1" dur="{period}s" repeatCount="indefinite"/>'
+                         f'<rect x="{ix}" y="{iy}" width="18" height="20" fill="{th["accent"]}" fill-opacity="0.25" stroke="{th["accent"]}" stroke-width="1.4">'
+                         f'<animate attributeName="fill-opacity" values="0.25;0.25;0.9;0.25;0.9;0.25" keyTimes="0;0.25;0.33;0.41;0.49;0.55" dur="{period}s" repeatCount="indefinite"/></rect>'
+                         f'<path d="M{ix + 5} {iy + 6}L{ix + 13} {iy + 14}M{ix + 13} {iy + 6}L{ix + 5} {iy + 14}" stroke="{th["bracket"]}" stroke-width="1.6"/></g>')
+            else:
+                p.append(f'<rect x="{ix}" y="{iy}" width="18" height="20" fill="{th["chip_fill"]}" stroke="{s}" stroke-width="1.1" stroke-opacity="0.75">'
+                         f'<animate attributeName="stroke-opacity" values="0.75;0.75;1;0.75" keyTimes="0;0.2;0.24;0.32" dur="{period}s" repeatCount="indefinite"/></rect>')
+    p.append('</svg>')
+    return ''.join(p)

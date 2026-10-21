@@ -15,6 +15,7 @@ for th in ('dark', 'light'):
         open(f'{R}/headings/{slug}-{th}.svg', 'w').write(uniq(svgkit.heading(t, th)))
     open(f'{R}/skills/languages-{th}.svg', 'w').write(uniq(svgkit.chips(['Python', 'SQL', 'SQLite'], th)))
     open(f'{R}/skills/tools-{th}.svg', 'w').write(uniq(svgkit.chips(['Git', 'GitHub Actions', 'pytest', 'IntelliJ IDEA'], th)))
+    open(f'{R}/safeshelf-card-{th}.svg', 'w').write(uniq(svgkit.project_card(th)))
     for slug, (l, v) in {'github': ('GitHub', None), 'linkedin': ('LinkedIn', 'Connect'), 'email': ('Email', 'banelechakuma@gmail.com')}.items():
         open(f'{R}/connect/{slug}-{th}.svg', 'w').write(uniq(svgkit.button(l, v, th)))
 print('built')

@@ -48,6 +48,14 @@ is unfamiliar.
 </picture>
 </h3>
 
+<a href="https://github.com/BaneleChakuma/safeshelf-tembisa">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/safeshelf-card-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/safeshelf-card-light.svg">
+  <img width="100%" alt="SafeShelf Tembisa: tracking food from the delivery truck to the shelf. View the repository." src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/safeshelf-card-dark.svg">
+</picture>
+</a>
+
 A data pipeline that tracks food **from the delivery truck to the shelf** in Tembisa, tackling
 two problems at once: expired or spoiled food sold in local stores, and the risk of delivery
 trucks being hijacked.
