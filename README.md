@@ -82,9 +82,11 @@ that same foundation rather than being needed to prove the concept works.
 </picture>
 </h3>
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/skills/languages-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/skills/languages-light.svg">
+  <img alt="Python, SQL, SQLite" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/skills/languages-dark.svg">
+</picture>
 
 <a name="tools-and-workflow"></a>
 <h3>
@@ -95,10 +97,11 @@ that same foundation rather than being needed to prove the concept works.
 </picture>
 </h3>
 
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=flat-square&logo=intellijidea&logoColor=white)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/skills/tools-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/skills/tools-light.svg">
+  <img alt="Git, GitHub Actions, pytest, IntelliJ IDEA" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/skills/tools-dark.svg">
+</picture>
 
 ---
 
