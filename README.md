@@ -72,15 +72,11 @@ trucks being hijacked.
 
 ```mermaid
 flowchart LR
-    subgraph inputs["Daily input files"]
-        direction TB
-        D["Store deliveries"]
-        S["Committee shelf checks"]
-        C["Anonymous resident reports"]
-        T["Truck trip updates"]
-    end
-    inputs --> P["extract → validate → clean → load"]
-    P --> DB[("SQLite database")]
+    D["Store deliveries"] --> P
+    S["Committee shelf checks"] --> P
+    C["Anonymous resident reports"] --> P
+    T["Truck trip updates"] --> P
+    P["extract → validate → clean → load"] --> DB[("SQLite database")]
     DB --> CV{{"committee_view"}}
     DB --> SV{{"store_view"}}
     DB --> MV{{"community_view"}}
