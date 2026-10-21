@@ -168,8 +168,26 @@ the people who matter to you.
 
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/BaneleChakuma)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/banele-chakuma-51301436b/)
-[![Email](https://img.shields.io/badge/Email-banelechakuma%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:banelechakuma@gmail.com)
+<a href="https://github.com/BaneleChakuma">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/connect/github-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/connect/github-light.svg">
+  <img alt="GitHub" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/connect/github-dark.svg">
+</picture>
+</a>
+<a href="https://www.linkedin.com/in/banele-chakuma-51301436b/">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/connect/linkedin-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/connect/linkedin-light.svg">
+  <img alt="LinkedIn: Connect" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/connect/linkedin-dark.svg">
+</picture>
+</a>
+<a href="mailto:banelechakuma@gmail.com">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/connect/email-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/connect/email-light.svg">
+  <img alt="Email: banelechakuma@gmail.com" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/connect/email-dark.svg">
+</picture>
+</a>
 
 </div>
