@@ -137,16 +137,13 @@ that same foundation rather than being needed to prove the concept works.
 
 ---
 
-<table align="center">
-<tr>
-<td><img src="https://github-readme-stats.vercel.app/api?username=BaneleChakuma&show_icons=true&theme=dracula&hide_border=true&count_private=true&bg_color=0d1117"/></td>
-<td><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BaneleChakuma&layout=compact&theme=dracula&hide_border=true&bg_color=0d1117"/></td>
-</tr>
-</table>
-
 <div align="center">
 
-![Streak](https://github-readme-streak-stats.herokuapp.com/?user=BaneleChakuma&theme=dracula&hide_border=true&background=0D1117)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/activity/activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/activity/activity-light.svg">
+  <img width="100%" alt="My GitHub activity over the last 12 months: contributions, current and longest streak, a 26-week contribution map and my top languages" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/activity/activity-dark.svg">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/BaneleChakuma/BaneleChakuma@output/github-contribution-grid-snake-dark.svg" />
