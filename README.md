@@ -8,7 +8,11 @@
 
 </div>
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-light.svg">
+  <img width="100%" alt="" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+</picture>
 
 <a name="how-i-got-started"></a>
 <h3>
@@ -37,7 +41,11 @@ no lecture could have. WeThinkCode_ sets it up this way deliberately — simulat
 workplace, with its tools and its pace, so that by the time you're actually in one, none of it
 is unfamiliar.
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-light.svg">
+  <img width="100%" alt="" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+</picture>
 
 <a name="featured-project"></a>
 <h3>
@@ -90,7 +98,11 @@ that same foundation rather than being needed to prove the concept works.
 
 </details>
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-light.svg">
+  <img width="100%" alt="" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+</picture>
 
 <a name="languages-and-data"></a>
 <h3>
@@ -122,7 +134,11 @@ that same foundation rather than being needed to prove the concept works.
   <img alt="Git, GitHub Actions, pytest, IntelliJ IDEA" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/skills/tools-dark.svg">
 </picture>
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-light.svg">
+  <img width="100%" alt="" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+</picture>
 
 <div align="center">
 
@@ -134,7 +150,11 @@ that same foundation rather than being needed to prove the concept works.
 
 </div>
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-light.svg">
+  <img width="100%" alt="" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+</picture>
 
 <a name="what-im-working-on"></a>
 <h3>
@@ -154,7 +174,11 @@ that same foundation rather than being needed to prove the concept works.
 **Latest commit:** [Update USER\_STORIES.md to match the combined milestone](https://github.com/BaneleChakuma/safeshelf-tembisa/commit/ed1a187644c42aecdb6be5468a97caa3af0d4489) in [safeshelf-tembisa](https://github.com/BaneleChakuma/safeshelf-tembisa) · 20 Oct 2026
 <!-- latest-commit:end -->
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-light.svg">
+  <img width="100%" alt="" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+</picture>
 
 <a name="outside-of-code"></a>
 <h3>
@@ -169,7 +193,11 @@ One of my favourite anime is **Solo Leveling**. What stays with me most is the i
 becoming stronger is never just for your own sake — it's what makes you able to show up for
 the people who matter to you.
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-light.svg">
+  <img width="100%" alt="" src="https://raw.githubusercontent.com/BaneleChakuma/BaneleChakuma/master/assets/divider-dark.svg">
+</picture>
 
 <a name="connect-with-me"></a>
 <h3>

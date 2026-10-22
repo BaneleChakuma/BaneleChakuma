@@ -17,7 +17,8 @@ import urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from svgkit import THEMES, chamfer_path, escape, f, font_css, tw, uniq  # noqa: E402
+from svgkit import (EXPO_OUT, RADIUS, THEMES, brackets, escape, f, font_css, glass, lin, rad,  # noqa: E402
+                    reveal, stage, style, svg_open, tw, uniq)
 
 ROOT = Path(__file__).resolve().parent.parent
 LOGIN = os.environ.get('GH_LOGIN', 'BaneleChakuma')
@@ -144,16 +145,16 @@ def update_readme(commit):
     return False
 
 
-LEVELS = {'dark': ['#2a0f30', '#4a044e', '#86198f', '#c026d3', '#e879f9'],
-          'light': ['#f3e3f8', '#f5d0fe', '#e879f9', '#c026d3', '#86198f']}
-LANG_COLORS = {'dark': ['#e879f9', '#c026d3', '#a21caf', '#86198f', '#4a044e'],
+LEVELS = {'dark': [('#f0abfc', 0.09), ('#701a75', 1), ('#a21caf', 1), ('#d946ef', 1), ('#f5d0fe', 1)],
+          'light': [('#86198f', 0.08), ('#f5d0fe', 1), ('#e879f9', 1), ('#c026d3', 1), ('#86198f', 1)]}
+LANG_COLORS = {'dark': ['#f0abfc', '#d946ef', '#a21caf', '#86198f', '#5b1a63'],
                'light': ['#86198f', '#a21caf', '#c026d3', '#e879f9', '#f5d0fe']}
 
 
 def card(theme_name, stats):
     """stats: None (no data yet) or dict(total, current, longest, repos, days, langs)."""
     th = THEMES[theme_name]
-    W, H = 900, 236
+    W, H = 900, 240
     pending = stats is None
     total = '—' if pending else f"{stats['total']:,}"
     current = '—' if pending else str(stats['current'])
@@ -163,41 +164,36 @@ def card(theme_name, stats):
     legend = [f'{name} {share * 100:.1f}%' for name, share in langs]
     labels = ['CONTRIBUTIONS', 'CURRENT STREAK', 'LONGEST STREAK']
     note = 'Fills in after the first daily sync' if pending else ''
-    css = font_css({600: total + current + longest,
-                    500: 'ACTIVITY' + ''.join(labels) + repos_label + 'TOP LANGUAGES' + 'days' + 'last 26 weeks' + ''.join(legend) + note})
-    p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">',
-         f'<title id="t">GitHub activity for {LOGIN}</title>',
-         f"<style>{css}text{{font-family:'FC',ui-monospace,monospace}}</style>",
-         '<defs>',
-         f'<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{th["panel0"]}"/><stop offset="1" stop-color="{th["panel1"]}"/></linearGradient>',
-         f'<radialGradient id="gl" cx="0.15" cy="0.1" r="0.7"><stop offset="0" stop-color="{th["glow"]}" stop-opacity="0.3"/><stop offset="1" stop-color="{th["glow"]}" stop-opacity="0"/></radialGradient>',
-         f'<linearGradient id="nm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{th["name0"]}"/><stop offset="1" stop-color="{th["name2"]}"/></linearGradient>',
-         f'<linearGradient id="dv" gradientUnits="userSpaceOnUse" x1="124" y1="0" x2="640" y2="0"><stop offset="0" stop-color="{th["accent"]}" stop-opacity="0.9"/><stop offset="1" stop-color="{th["accent"]}" stop-opacity="0"/></linearGradient>',
-         f'<clipPath id="card"><rect width="{W}" height="{H}" rx="18"/></clipPath>',
-         '</defs>',
-         f'<g clip-path="url(#card)"><rect width="{W}" height="{H}" fill="url(#bg)"/><rect width="{W}" height="{H}" fill="url(#gl)"/></g>']
-    frame = chamfer_path(20, 16, 860, 204, 12)
-    p.append(f'<path d="{frame}" fill="none" stroke="{th["line"]}" stroke-width="1.2" stroke-opacity="0.7"/>')
-    for (cx, cy, dx, dy) in [(16, 12, 1, 1), (884, 12, -1, 1), (16, 224, 1, -1), (884, 224, -1, -1)]:
-        p.append(f'<path d="M{cx} {cy + dy * 16}V{cy}H{cx + dx * 16}" fill="none" stroke="{th["bracket"]}" stroke-width="2.2"/>')
-    p.append(f'<text x="44" y="44" font-size="11" font-weight="500" letter-spacing="4" fill="{th["label"]}">ACTIVITY</text>')
-    p.append('<line x1="124" y1="40" x2="640" y2="40" stroke="url(#dv)" stroke-width="1"/>')
-    p.append(f'<text x="856" y="44" font-size="10.5" font-weight="500" letter-spacing="2" text-anchor="end" fill="{th["muted"]}">{escape(repos_label)}</text>')
+    css = font_css({700: total + current + longest,
+                    600: 'ACTIVITY' + ''.join(labels) + 'TOP LANGUAGES',
+                    500: repos_label + 'days' + 'last 26 weeks' + ''.join(legend) + note})
+    levels = LEVELS[theme_name]
+    colors = LANG_COLORS[theme_name]
+    px, py, pw, ph, pr = 16, 16, 868, 208, RADIUS['panel']
+    x0, x1 = px + 26, px + pw - 26          # content edges: 42 .. 858
+    sdefs, sbody, sedge = stage(th, W, H, key=(0.12, 0.04, 0.7), fill=(0.96, 1.05, 0.6), dots=False)
+    gdefs, gbody = glass(th, px, py, pw, ph, W, H, pr)
+    p = [svg_open(W, H, f'GitHub activity for {LOGIN}'), style(css), '<defs>', sdefs, gdefs,
+         lin('nm', [(0, th['name0'], 1), (0.55, th['name1'], 1), (1, th['name2'], 1)], 0, 0, 0.9, 1),
+         lin('dv', [(0, th['accent'], 0.75), (1, th['accent'], 0)], x0 + 91, 0, 640, 0, user=True),
+         rad('hg', [(0, levels[4][0], 0.6), (1, levels[4][0], 0)]),
+         '</defs>', sbody, gbody, brackets(th, px, py, pw, ph, pr)]
+    p.append(f'<text x="{x0}" y="45" font-size="11" font-weight="600" letter-spacing="4" fill="{th["label"]}" '
+             f'fill-opacity="{f(th["label_op"])}">ACTIVITY</text>')
+    p.append(f'<line x1="{x0 + 91}" y1="41" x2="640" y2="41" stroke="url(#dv)" stroke-width="1"/>')
+    p.append(f'<text x="{x1}" y="45" font-size="10.5" font-weight="500" letter-spacing="2" text-anchor="end" fill="{th["muted"]}">{escape(repos_label)}</text>')
 
-    def appear(i):
-        b = 0.2 + i * 0.12
-        return (f'<animate attributeName="opacity" values="0;0;1" keyTimes="0;{f(b / (b + 0.5))};1" dur="{f(b + 0.5)}s" fill="freeze"/>'
-                f'<animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" keyTimes="0;{f(b / (b + 0.5))};1" '
-                f'calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" dur="{f(b + 0.5)}s" fill="freeze"/>')
     for i, (value, label) in enumerate(zip([total, current, longest], labels)):
-        x = 44 + i * 166
-        p.append(f'<g>{appear(i)}<text x="{x}" y="96" font-size="34" font-weight="600" fill="url(#nm)">{escape(value)}</text>')
+        x = x0 + i * 166
+        p.append('<g>' + reveal(0.2 + i * 0.12, 0.6, 8)
+                 + f'<text x="{x}" y="97" font-size="34" font-weight="700" fill="url(#nm)">{escape(value)}</text>')
         if i > 0 and not pending:
-            p.append(f'<text x="{f(x + tw(value, 34) + 8)}" y="96" font-size="13" font-weight="500" fill="{th["muted"]}">{'day' if value == '1' else 'days'}</text>')
-        p.append(f'<text x="{x}" y="118" font-size="10.5" font-weight="500" letter-spacing="2" fill="{th["label"]}">{label}</text></g>')
+            unit = 'day' if value == '1' else 'days'
+            p.append(f'<text x="{f(x + tw(value, 34) + 8)}" y="97" font-size="13" font-weight="500" fill="{th["muted"]}">{unit}</text>')
+        p.append(f'<text x="{x}" y="119" font-size="10.5" font-weight="600" letter-spacing="2" fill="{th["label"]}" '
+                 f'fill-opacity="{f(th["label_op"])}">{label}</text></g>')
 
     # contribution heatmap, last 26 weeks, one column per week (Sunday on top)
-    levels = LEVELS[theme_name]
     days = [] if pending else stats['days'][-26 * 7:]
     nonzero = sorted(c for _, c in days if c > 0)
     cuts = [nonzero[int(len(nonzero) * q)] for q in (0.25, 0.5, 0.75)] if nonzero else []
@@ -206,40 +202,46 @@ def card(theme_name, stats):
         if c <= 0:
             return 0
         return 1 + sum(c > cut for cut in cuts)
-    x0, y0, step, size = 548, 58, 12, 9
+    step, size = 12, 9
+    hx, hy = x1 - (26 * step - (step - size)), 59
     first_weekday = 0
     if days:
         first_weekday = (dt.date.fromisoformat(days[0][0]).weekday() + 1) % 7  # Sunday = 0
     for col in range(26):
-        b = 0.5 + col * 0.03
-        p.append(f'<g><animate attributeName="opacity" values="0;0;1" keyTimes="0;{f(b / (b + 0.3))};1" dur="{f(b + 0.3)}s" fill="freeze"/>')
+        p.append('<g>' + reveal(0.5 + col * 0.03, 0.35, 0))
         for row in range(7):
             idx = col * 7 + row - first_weekday
             c = days[idx][1] if days and 0 <= idx < len(days) else 0
-            fill = levels[level(c)]
-            p.append(f'<rect x="{x0 + col * step}" y="{y0 + row * step}" width="{size}" height="{size}" rx="1.5" fill="{fill}"/>')
+            lv = level(c)
+            color, op = levels[lv]
+            cx, cy = hx + col * step, hy + row * step
+            if lv == 4:
+                p.append(f'<circle cx="{f(cx + size / 2)}" cy="{f(cy + size / 2)}" r="10" fill="url(#hg)"/>')
+            alpha = '' if op == 1 else f' fill-opacity="{f(op)}"'
+            p.append(f'<rect x="{cx}" y="{cy}" width="{size}" height="{size}" rx="{RADIUS["cell"]}" fill="{color}"{alpha}/>')
         p.append('</g>')
-    p.append(f'<text x="857" y="156" font-size="10" font-weight="500" text-anchor="end" fill="{th["muted"]}">last 26 weeks</text>')
+    p.append(f'<text x="{x1}" y="157" font-size="10" font-weight="500" text-anchor="end" fill="{th["muted"]}">last 26 weeks</text>')
 
     # languages
-    p.append(f'<text x="44" y="158" font-size="10.5" font-weight="500" letter-spacing="2" fill="{th["label"]}">TOP LANGUAGES</text>')
-    bar_x, bar_w, bar_y = 44, 812, 170
-    p.append(f'<rect x="{bar_x}" y="{bar_y}" width="{bar_w}" height="8" rx="2" fill="{levels[0]}"/>')
-    colors = LANG_COLORS[theme_name]
+    p.append(f'<text x="{x0}" y="159" font-size="10.5" font-weight="600" letter-spacing="2" fill="{th["label"]}" '
+             f'fill-opacity="{f(th["label_op"])}">TOP LANGUAGES</text>')
+    bar_x, bar_w, bar_y = x0, x1 - x0, 171
+    p.append(f'<rect x="{bar_x}" y="{bar_y}" width="{bar_w}" height="8" rx="4" fill="{levels[0][0]}" fill-opacity="{f(levels[0][1])}"/>')
     x = bar_x
     for i, (name, share) in enumerate(langs):
-        w = bar_w * share
-        p.append(f'<rect x="{f(x)}" y="{bar_y}" width="{f(max(w - 2, 1))}" height="8" rx="1.5" fill="{colors[i % len(colors)]}">'
-                 f'<animate attributeName="width" values="0;0;{f(max(w - 2, 1))}" keyTimes="0;0.4;1" calcMode="spline" '
-                 f'keySplines="0 0 1 1;0.2 0.8 0.2 1" dur="1.6s" fill="freeze"/></rect>')
-        x += w
-    lx = 44
+        w = max(bar_w * share - 2, 1.5)
+        p.append(f'<rect x="{f(x)}" y="{bar_y}" width="{f(w)}" height="8" rx="{f(min(4, w / 2))}" fill="{colors[i % len(colors)]}">'
+                 f'<animate attributeName="width" values="0;0;{f(w)}" keyTimes="0;0.4;1" calcMode="spline" '
+                 f'keySplines="0 0 1 1;{EXPO_OUT}" dur="1.6s" fill="freeze"/></rect>')
+        x += bar_w * share
+    lx = x0
     for i, text in enumerate(legend):
-        p.append(f'<rect x="{lx}" y="193" width="9" height="9" rx="1.5" fill="{colors[i % len(colors)]}"/>')
-        p.append(f'<text x="{lx + 15}" y="202" font-size="12" font-weight="500" fill="{th["chip_text"]}">{escape(text)}</text>')
+        p.append(f'<rect x="{f(lx)}" y="194" width="9" height="9" rx="2.5" fill="{colors[i % len(colors)]}"/>')
+        p.append(f'<text x="{f(lx + 15)}" y="203" font-size="12" font-weight="500" fill="{th["chip_text"]}">{escape(text)}</text>')
         lx += 15 + tw(text, 12) + 26
     if pending:
-        p.append(f'<text x="44" y="202" font-size="12" font-weight="500" fill="{th["muted"]}">{note}</text>')
+        p.append(f'<text x="{x0}" y="203" font-size="12" font-weight="500" fill="{th["muted"]}">{note}</text>')
+    p.append(sedge)
     p.append('</svg>')
     return uniq(''.join(p))
 

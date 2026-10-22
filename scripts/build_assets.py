@@ -11,12 +11,14 @@ for d in ('headings', 'skills', 'connect'):
     os.makedirs(f'{R}/{d}', exist_ok=True)
 for th in ('dark', 'light'):
     open(f'{R}/header-{th}.svg', 'w').write(uniq(svgkit.header(th)))
+    open(f'{R}/divider-{th}.svg', 'w').write(uniq(svgkit.divider(th)))
     for slug, t in H.items():
         open(f'{R}/headings/{slug}-{th}.svg', 'w').write(uniq(svgkit.heading(t, th)))
     open(f'{R}/skills/languages-{th}.svg', 'w').write(uniq(svgkit.chips(['Python', 'SQL', 'SQLite'], th)))
     open(f'{R}/skills/tools-{th}.svg', 'w').write(uniq(svgkit.chips(['Git', 'GitHub Actions', 'pytest', 'IntelliJ IDEA'], th)))
     open(f'{R}/safeshelf-card-{th}.svg', 'w').write(uniq(svgkit.project_card(th)))
     open(f'{R}/safeshelf-pipeline-{th}.svg', 'w').write(uniq(svgkit.pipeline_diagram(th)))
-    for slug, (l, v) in {'github': ('GitHub', None), 'linkedin': ('LinkedIn', 'Connect'), 'email': ('Email', 'banelechakuma@gmail.com')}.items():
-        open(f'{R}/connect/{slug}-{th}.svg', 'w').write(uniq(svgkit.button(l, v, th)))
+    buttons = {'github': ('GitHub', None), 'linkedin': ('LinkedIn', 'Connect'), 'email': ('Email', 'banelechakuma@gmail.com')}
+    for i, (slug, (l, v)) in enumerate(buttons.items()):
+        open(f'{R}/connect/{slug}-{th}.svg', 'w').write(uniq(svgkit.button(l, v, th, delay=i * 0.35)))
 print('built')
