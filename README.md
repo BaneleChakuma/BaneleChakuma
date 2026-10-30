@@ -171,7 +171,7 @@ that same foundation rather than being needed to prove the concept works.
 - Writing tests before the code they test — unit, acceptance and end-to-end
 
 <!-- latest-commit:start -->
-**Latest commit:** [Add demo video to README](https://github.com/BaneleChakuma/safeshelf-tembisa/commit/1ebb18cd9d16c990cc1faa0d9b1b8ef20e2d2fd1) in [safeshelf-tembisa](https://github.com/BaneleChakuma/safeshelf-tembisa) · 29 Oct 2026
+**Latest commit:** [Point README demo video to the 1440p upload](https://github.com/BaneleChakuma/safeshelf-tembisa/commit/41da1c842976215db46c47c220d976afb4169c10) in [safeshelf-tembisa](https://github.com/BaneleChakuma/safeshelf-tembisa) · 29 Oct 2026
 <!-- latest-commit:end -->
 
 <picture>
